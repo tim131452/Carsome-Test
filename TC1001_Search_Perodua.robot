@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation  Test Case 1: Verify Perodua Axia listing is available in Carsome.
+Documentation  User go to Carsome to find the cheapest Perodua Axia available.
 Library  SeleniumLibrary
 Library  String
 Resource  Custom_Keywords.robot
@@ -8,7 +8,8 @@ Suite Setup  Open Website  ${Site_URL}
 Suite Teardown  Run Keywords  Close Browser             
 
 *** Test Cases ***
-User Verify Listing
+Verify Perodua Listing
+    [Documentation]  User verify Perodua Axia is available in Carsome.
     Wait Then Click Element  ${Buy_Car_Link}
     Wait Then Click Element  ${Perodua_Dropdown_Menu}
     Wait Until Element Is Visible  ${Listing_Content_Wrapper}
