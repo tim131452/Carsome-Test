@@ -70,7 +70,7 @@ Test Automation Script for Carsome Home Interview Test
    ```bash
    $ robot TC1001_Search_Perodua.robot
    ```
-5. To view the HTML test report:
+5. To view the HTML test report after test execution:
    ```bash
    $ open log.html
    or
