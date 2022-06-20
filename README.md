@@ -22,7 +22,7 @@ Test Automation Script for Carsome Home Interview Test
    ```
    Then:
    ```bash
-   $ source ~/.profile
+   $ source ~/.bash_profile
    ```
    Then check if the default is Python 3 (*Should return Python 3.x.x*):
    ```bash
