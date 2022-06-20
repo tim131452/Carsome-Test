@@ -10,6 +10,7 @@ Suite Teardown  Run Keywords  Close Browser
 *** Test Cases ***
 Verify Perodua Listing
     [Documentation]  User verify Perodua Axia is available in Carsome.
+    [Tags]  TESTCASE_1
     Wait Then Click Element  ${Buy_Car_Link}
     Wait Then Click Element  ${Perodua_Dropdown_Menu}
     Wait Until Element Is Visible  ${Listing_Content_Wrapper}
