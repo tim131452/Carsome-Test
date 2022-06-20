@@ -15,4 +15,13 @@ Verify Perodua Listing
     Wait Then Click Element  ${Perodua_Dropdown_Menu}
     Wait Until Element Is Visible  ${Listing_Content_Wrapper}
     Wait Until Element Is Visible  ${Perodua_Car_Title_Listing}
-    Count Listing  ${Perodua_Car_Title_Listing}  counter=18
+    Verify Count Listing  ${Perodua_Car_Title_Listing}  counter=18
+
+Sort Listing Price
+    [Documentation]  User verify the price of available Perodua Axia can be sorted from lowest to highest.
+    [Tags]  TESTCASE_2
+    [Setup]  Run Keyword If  '${PREV TEST STATUS}' == 'FAIL'  Fail  First Test Case Did Not Pass
+    Verify Count Listing  ${Perodua_Car_Title_Listing}  counter=18
+    Wait Then Click Element  ${Recommended_Link}
+    Wait Then Click Element  ${Lowest_Price_Link}
+    Compare Ascending Price Order  ${First_Car_Price}  ${Second_Car_Price}
