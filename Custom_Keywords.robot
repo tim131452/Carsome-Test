@@ -21,7 +21,7 @@ Wait Then Input Text
 Verify Count Listing  ### Obtain the similar element occurances and compare with specified count
     [Arguments]  ${html_element}  ${counter}
     ${element_count}=  Get Element Count  ${html_element}
-    Should Be True  ${element_count} == ${counter}
+    Should Be True  ${element_count} == ${counter}  msg= Total car count: ${element_count} is not equal to ${counter}
 
 Compare Ascending Price Order  ### Get two car price and compare the results
     [Arguments]  ${first_price_html_element}  ${second_price_html_element}

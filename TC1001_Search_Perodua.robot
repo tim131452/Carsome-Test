@@ -5,7 +5,7 @@ Library  String
 Resource  Custom_Keywords.robot
 Resource  Custom_Variables.robot
 Suite Setup  Open Website  ${Site_URL}
-Suite Teardown  Run Keywords  Close Browser             
+Suite Teardown  Close Browser             
 
 *** Test Cases ***
 Verify Perodua Listing
@@ -15,7 +15,7 @@ Verify Perodua Listing
     Wait Then Click Element  ${Perodua_Dropdown_Menu}
     Wait Until Element Is Visible  ${Listing_Content_Wrapper}
     Wait Until Element Is Visible  ${Perodua_Car_Title_Listing}
-    Verify Count Listing  ${Perodua_Car_Title_Listing}  counter=18
+    Verify Count Listing  ${Perodua_Car_Title_Listing}  counter=18  
 
 Sort Listing Price
     [Documentation]  User verify the price of available Perodua Axia can be sorted from lowest to highest.
